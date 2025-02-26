@@ -36,6 +36,7 @@ pred = modelFit.predict(X_test)
 
 # Convert predictions to binary values (1 or 0)
 pred = pred.astype(int)
+pred = pred.tolist()
 pred
 
 # test_data = test_data.drop(columns='meal')
