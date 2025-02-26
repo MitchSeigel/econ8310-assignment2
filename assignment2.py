@@ -26,8 +26,8 @@ y_train = train_data['meal']
 X_test = test_data.drop(columns=['id','DateTime','meal'])
 
 # Create a RandomForestClassifier instance
-# model = RandomForestClassifier(n_estimators=100, random_state=42)  # You can adjust hyperparameters
-model = RandomForestClassifier(n_estimators=200, max_depth=50)
+# model = RandomForestClassifier(n_estimators=100, random_state=42)
+model = RandomForestClassifier()
 
 # Fit the model to the training data
 modelFit = model.fit(X_train, y_train)
