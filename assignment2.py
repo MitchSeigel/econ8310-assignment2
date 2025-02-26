@@ -9,6 +9,7 @@ Original file is located at
 
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
@@ -21,7 +22,8 @@ y_train = train_data['meal']
 
 X_test = test_data.drop(columns=['id','DateTime','meal'])
 
-model = RandomForestClassifier(n_estimators=200, max_depth=50)
+# model = RandomForestClassifier(n_estimators=200, max_depth=50)
+model = DecisionTreeClassifier(max_depth=100, min_samples_leaf=10)
 
 modelFit = model.fit(X_train, y_train)
 
